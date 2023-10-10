@@ -23,8 +23,7 @@ if(searchParams.get('code')){
   "method": "POST",
   "timeout": 0,
   "headers": {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Cookie": "bcookie=\"v=2&3bf8fba6-2d2a-4522-81f0-a35172952309\"; lang=v=2&lang=en-us; lidc=\"b=VB89:s=V:r=V:a=V:p=V:g=3461:u=56:x=1:i=1696946126:t=1697031348:v=2:sig=AQF9sIlXszeuYXj8x34wF-Ev-s59pitf\"; bscookie=\"v=1&202308271001059664dd9b-b288-4aac-8ce5-2b42ad87ab6bAQFiQhEHhvKWd6RWufxBi_gA5sM3oqXv\""
+    "Content-Type": "application/x-www-form-urlencoded"
   },
   "data": {
     "grant_type": "authorization_code",
@@ -44,7 +43,6 @@ $.ajax(settings).done(function (response) {
 
     var myHeaders = new Headers();
 myHeaders.append("Authorization", "Bearer "+access_token);
-myHeaders.append("Cookie", "bcookie=\"v=2&3bf8fba6-2d2a-4522-81f0-a35172952309\"; lidc=\"b=VB19:s=V:r=V:a=V:p=V:g=4144:u=1253:x=1:i=1696934330:t=1696955793:v=2:sig=AQH3Xb51pEBY4U6-_USvGYHK1_M29cvz\"");
 
 var requestOptions = {
   method: 'GET',
