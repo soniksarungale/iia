@@ -7,10 +7,12 @@
 </head>
 <body>
     <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=775on1i1wmpzyv&redirect_uri=https%3A%2F%2Fsoniksarungale.com%2Fiia%2Fs1.html&state=foobar&scope=openid%20profile%20email"><img src="https://i.stack.imgur.com/mKpeu.png" alt="" style="width: 200px;"></a>
+<div id="accesstoken">
 
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        /*
+      
         var url = window.location.href;
 var urlWithoutDomain = window.location.pathname;
 var queryString = window.location.search;
@@ -37,9 +39,8 @@ if(searchParams.get('code')){
 
 $.ajax(settings).done(function (response) {
     var access_token=response.access_token;
-    */
+    $("#accesstoken").html(access_token);
     /*
-    */
     var access_token="AQU6SqB2OAEolwW7RyxqgJ7zh2nWxVfHo9AdYgCyUe1_XUlF8VlGj-adsaVBD0zvY8Ta6WTbrYYdZpYbEstj4Sshs1oPGcorFb2xiMCxts2241p30DOgjYilGzw2urR4N1foVAvdsjZEcBnNCfbTiY5dpZm0gSoqNSuEAmAXbasjfBnSxqVfDsUFmuzTzEK3-vsKZO4vGpITpYjMZhYp4zVt-Y_X-rD-ugugVATBomsTqb0crKFAAxzae5J6DqpE7pMAbYCLRNMOEHEq9YVuNMWTdxbTPNV_GO16_WdgYwAuhHBMpCZ5WTWPjXaVnqD-OWsUVbUFrFQJiwy7t8YJpqM1DfMo2w";
 console.log("access_token");
 console.log(access_token);
@@ -57,26 +58,10 @@ fetch("https://api.linkedin.com/v2/userinfo", requestOptions)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
-
-
-  var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function() {
-  if(this.readyState === 4) {
-    console.log(this.responseText);
-  }
+*/
 });
 
-xhr.open("GET", "https://api.linkedin.com/v2/userinfo");
-xhr.setRequestHeader("Authorization", "Bearer AQU6SqB2OAEolwW7RyxqgJ7zh2nWxVfHo9AdYgCyUe1_XUlF8VlGj-adsaVBD0zvY8Ta6WTbrYYdZpYbEstj4Sshs1oPGcorFb2xiMCxts2241p30DOgjYilGzw2urR4N1foVAvdsjZEcBnNCfbTiY5dpZm0gSoqNSuEAmAXbasjfBnSxqVfDsUFmuzTzEK3-vsKZO4vGpITpYjMZhYp4zVt-Y_X-rD-ugugVATBomsTqb0crKFAAxzae5J6DqpE7pMAbYCLRNMOEHEq9YVuNMWTdxbTPNV_GO16_WdgYwAuhHBMpCZ5WTWPjXaVnqD-OWsUVbUFrFQJiwy7t8YJpqM1DfMo2w");
-xhr.setRequestHeader("Cookie", "lidc=\"b=VB89:s=V:r=V:a=V:p=V:g=3462:u=56:x=1:i=1696949331:t=1697033183:v=2:sig=AQH_lzvagthikuQXwmXARdxS8gARtcEj\"; bcookie=\"v=2&3bf8fba6-2d2a-4522-81f0-a35172952309\"; lang=v=2&lang=en-us; lidc=\"b=VB89:s=V:r=V:a=V:p=V:g=3461:u=56:x=1:i=1696946126:t=1697031348:v=2:sig=AQF9sIlXszeuYXj8x34wF-Ev-s59pitf\"");
-
-xhr.send();
-/*
-});
-
-}*/
+}
     </script>
 </body>
 </html>
