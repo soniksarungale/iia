@@ -46,16 +46,14 @@ myHeaders.append("Authorization", "Bearer "+access_token);
 
 var requestOptions = {
   method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
+  mode: 'no-cors',
+  headers: myHeaders
 };
 
 fetch("https://api.linkedin.com/v2/userinfo", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-
-
 
 });
 
