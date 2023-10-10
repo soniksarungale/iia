@@ -38,9 +38,10 @@ $.ajax(settings).done(function (response) {
     var access_token=response.access_token;
     
     /*
-    var access_token="AQUOlk4CdyMDDqs85rGt141KIVPW2fFHP-yeQVuOUNgOrS5ng8JghC6x8pk6vC1eFBRrw9M2evmGhGh84NDYHA-wqgMwpmLu5-3F733V7VlOOiFvLJ3hiU-gas-xzyO1iciiC-Vmx1DuJdCUcWB431AwdxbYhKRn7uXBT1wgMpetTY1xM-JA-K1vuw2nFHOvQWqRdP6DGGXvosPxYjorxAmyYHQYfythD_Nj6EnitI6GW1leZqooI4YYOEGkEyAIHaPSPOhwvYg-56mqKHycohVd3OGzg_S6C5YBMOly__QYINGZxmR7srDwHI4k7_U5TNb4WlwqFXT3nVbFIXNFG71GI0qF7Q";
+    var access_token="AQVa6ZR3Tgcq7ladrkxMVLI0eehfHvKJhbh3VaSVGb4XlCOI_Gt4_xPsXqruSj-oRR8nza6EHUz18mfV5zlgij9gKCqf2Spei3nacKqQw0zc6YpasemV9K6g1iuRHF7TXEF4pNgdNyUbQmQVcPr3AFYW4VocJC7r9Y-Dp-PL54ICgkybCEJ69sQA5IyQ9ek_sx3Tw-0ixiWKFzEJ2EdxviBhgtJPB-nDgDEoWuwz7Yb2wf3SrxLYNDf6fBj46Ayb-IuCiWObFnQR-USEw77rNRIB3DPL_ORw1t6Oan4p5hxl0RA8nBxMv7eWPMQ1NvnNEeVJ0FiNQsbw89mvHuryEMQW6QhXKg";
     */
-
+console.log("access_token");
+console.log(access_token);
     var myHeaders = new Headers();
 myHeaders.append("Authorization", "Bearer "+access_token);
 
