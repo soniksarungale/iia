@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIA</title>
+    <title>S1</title>
 </head>
 <body>
+    <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=775on1i1wmpzyv&redirect_uri=https%3A%2F%2Fsoniksarungale.com%2Fiia%2Fs1.html&state=foobar&scope=openid%20profile%20email"><img src="https://i.stack.imgur.com/mKpeu.png" alt="" style="width: 200px;"></a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var url = window.location.href;
+var urlWithoutDomain = window.location.pathname;
+var queryString = window.location.search;
+var searchParams = new URLSearchParams(queryString);
+if(searchParams.get('code')){
+    var code = searchParams.get('code'); 
+    console.log(code);
     
+    var settings = {
+  "url": "https://www.linkedin.com/oauth/v2/accessToken",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Cookie": "bcookie=\"v=2&3bf8fba6-2d2a-4522-81f0-a35172952309\"; lang=v=2&lang=en-us; lidc=\"b=VB89:s=V:r=V:a=V:p=V:g=3461:u=56:x=1:i=1696946126:t=1697031348:v=2:sig=AQF9sIlXszeuYXj8x34wF-Ev-s59pitf\"; bscookie=\"v=1&202308271001059664dd9b-b288-4aac-8ce5-2b42ad87ab6bAQFiQhEHhvKWd6RWufxBi_gA5sM3oqXv\""
+  },
+  "data": {
+    "grant_type": "authorization_code",
+    "code": code,
+    "client_id": "775on1i1wmpzyv",
+    "client_secret": "UdsGnjDl6wOEbNn7",
+    "redirect_uri": "https://soniksarungale.com/iia/s1.html"
+  }
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+}
+    </script>
 </body>
 </html>
