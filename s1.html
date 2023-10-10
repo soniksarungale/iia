@@ -17,7 +17,7 @@ var searchParams = new URLSearchParams(queryString);
 if(searchParams.get('code')){
     var code = searchParams.get('code'); 
     console.log(code);
-    
+   
     var settings = {
   "url": "https://www.linkedin.com/oauth/v2/accessToken",
   "method": "POST",
@@ -36,7 +36,28 @@ if(searchParams.get('code')){
 };
 
 $.ajax(settings).done(function (response) {
-  console.log(response.access_token);
+    var access_token=response.access_token;
+    
+    /*
+    var access_token="AQUOlk4CdyMDDqs85rGt141KIVPW2fFHP-yeQVuOUNgOrS5ng8JghC6x8pk6vC1eFBRrw9M2evmGhGh84NDYHA-wqgMwpmLu5-3F733V7VlOOiFvLJ3hiU-gas-xzyO1iciiC-Vmx1DuJdCUcWB431AwdxbYhKRn7uXBT1wgMpetTY1xM-JA-K1vuw2nFHOvQWqRdP6DGGXvosPxYjorxAmyYHQYfythD_Nj6EnitI6GW1leZqooI4YYOEGkEyAIHaPSPOhwvYg-56mqKHycohVd3OGzg_S6C5YBMOly__QYINGZxmR7srDwHI4k7_U5TNb4WlwqFXT3nVbFIXNFG71GI0qF7Q";
+    */
+
+    var settings = {
+  "url": "https://api.linkedin.com/v2/userinfo",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Authorization": "Bearer "+access_token,
+    "Cookie": "bcookie=\"v=2&3bf8fba6-2d2a-4522-81f0-a35172952309\"; lidc=\"b=VB19:s=V:r=V:a=V:p=V:g=4144:u=1253:x=1:i=1696934330:t=1696955793:v=2:sig=AQH3Xb51pEBY4U6-_USvGYHK1_M29cvz\""
+  },
+};
+
+$.ajax(settings).done(function (response2) {
+  console.log(response2);
+});
+
+
+
 });
 
 }
